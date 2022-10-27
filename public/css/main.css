@@ -3135,7 +3135,6 @@ body.attention .container {
 }
 
 .banner {
-  height: 428px;
   background-color: lightgray;
   border-radius: 16px;
   overflow: hidden;
@@ -3167,8 +3166,8 @@ body.attention .container {
 .banner__img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .banner__bullet.glide__bullet--active {
@@ -3345,10 +3344,6 @@ body.attention .container {
   .logo-light {
     order: -1;
     margin-bottom: 24px;
-  }
-
-  .banner {
-    height: 240px;
   }
 
   .footer__links {

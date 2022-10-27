@@ -8,18 +8,16 @@
       <div class="banner glide" data-type="banner">
         <div class="banner__track glide__track" data-glide-el="track">
           <ul class="banner__slides glide__slides">
-            <li class="banner__slide glide__slide">
-              <div class="banner__content">
-                <h2 class="banner__title">Линдавит <br> для мужчин</h2>
-                <b class="banner__slogan">Ощути прилив сил и энергии</b>
-              </div>
-              <img
-                class="banner__img"
-                src="{{ asset('img/banners/lambrotin.webp') }}"
-                alt="banner"
-                width="1280"
-                height="540">
-            </li>
+            @foreach ($data['banners'] as $banner)
+              <li class="banner__slide glide__slide">
+                <img
+                  class="banner__img"
+                  src="{{ asset('img/banners/' . $banner->img) }}"
+                  alt="banner"
+                  width="1280"
+                  height="540">
+              </li>
+            @endforeach
           </ul>
         </div>
 
