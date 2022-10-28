@@ -46,20 +46,20 @@
       <li class="home-products__item">
         <img
           class="home-products__img"
-          src="{{ asset('img/lindavit.webp') }}"
-          width="320"
-          height="320"
-          alt="Линдавит">
-        <div class="content" data-content="home-product-2">{!! $data['home-product-2'] !!}</div>
-      </li>
-      <li class="home-products__item">
-        <img
-          class="home-products__img"
           src="{{ asset('img/cerebral.webp') }}"
           width="320"
           height="320"
           alt="Церебрал">
         <div class="content" data-content="home-product-3">{!! $data['home-product-3'] !!}</div>
+      </li>
+      <li class="home-products__item">
+        <img
+          class="home-products__img"
+          src="{{ asset('img/lindavit.webp') }}"
+          width="320"
+          height="320"
+          alt="Линдавит">
+        <div class="content" data-content="home-product-2">{!! $data['home-product-2'] !!}</div>
       </li>
     </ul>
 
