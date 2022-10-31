@@ -46,7 +46,7 @@
 
       <label class="form-dash__element">
         <span class="form-dash__label">Баннер</span>
-        <input class="visually-hidden" name="img" type="file" placeholder="placeholder" accept=".png, .jpeg, .jpg">
+        <input class="visually-hidden" name="img" type="file" placeholder="placeholder" accept="image/*">
         <input class="form-dash__field" type="text" placeholder="Выберите файл" readonly value="{{ $data['banner']->img ?? '' }}">
       </label>
 
