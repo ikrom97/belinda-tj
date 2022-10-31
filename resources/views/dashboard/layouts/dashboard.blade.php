@@ -17,9 +17,9 @@
     </a>
 
     <ul class="dashboard__menu">
-      {{-- <li class="dashboard__menu-item @if ($route == 'banners') dashboard__menu-item--current @endif">
+      <li class="dashboard__menu-item @if ($route == 'banners') dashboard__menu-item--current @endif">
         <a class="dashboard__link" href="{{ route('banners') }}">Баннеры</a>
-      </li> --}}
+      </li>
 
       <li class="dashboard__menu-item @if ($route == 'admin.products') dashboard__menu-item--current @endif">
         <a class="dashboard__link" href="{{ route('admin.products') }}">Продукты</a>
