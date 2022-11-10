@@ -18,13 +18,15 @@ const searchInput = header.querySelector('input[type="search"]');
 searchInput.setAttribute('size', searchInput.getAttribute('placeholder').length);
 
 searchInput.addEventListener('input', () => {
-  searchInput.value.length > 0 ? searchInput.setAttribute('size', searchInput.value.length) : searchInput.setAttribute('size', searchInput.getAttribute('placeholder').length);
+  searchInput.value.length > 0
+    ? searchInput.setAttribute('size', searchInput.value.length)
+    : searchInput.setAttribute('size', searchInput.getAttribute('placeholder').length);
 });
 
 searchInput.addEventListener('focusout', () => {
   searchInput.setAttribute('size', searchInput.getAttribute('placeholder').length);
-  searchInput.value = '';
-  document.querySelector('.search-result-holder').innerHTML = '';
+  // searchInput.value = '';
+  // document.querySelector('.search-result-holder').innerHTML = '';
 });
 
 hamburgerEl.addEventListener('click', () => {
