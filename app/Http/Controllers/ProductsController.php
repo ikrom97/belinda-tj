@@ -15,6 +15,7 @@ class ProductsController extends Controller
     if ($request->agreement == 'agree') {
       session()->put('aware', 'awared');
     }
+
     if (!session()->has('aware')) {
       return redirect(route('products.attention'));
     }
@@ -60,11 +61,11 @@ class ProductsController extends Controller
 
   public function show(Request $request)
   {
-    if ($request->agree == 'agree') {
+    if ($request->agreement == 'agree') {
       session()->put('aware', 'awared');
     }
     if (!session()->has('aware')) {
-      return redirect(route('products.attention'));
+      return redirect(route('products.attention') . '?slug=' . $request->slug);
     }
 
     $data = Helper::getContents('products');
@@ -97,9 +98,10 @@ class ProductsController extends Controller
     return response()->download($file, $product->filename, $headers);
   }
 
-  public function attention()
+  public function attention(Request $request)
   {
-    $data = Helper::getContents('products');
-    return view('pages.products.attention', compact('data'));
+    $slug = $request->slug;
+
+    return view('pages.products.attention', compact('slug'));
   }
 }

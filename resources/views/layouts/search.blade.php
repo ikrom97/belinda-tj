@@ -11,7 +11,7 @@
     @endforeach
     @foreach ($result['newslifestyles'] as $newslifestyle)
       <li class="search-result-item">
-        <a class="search-result-link" href="{{ route('products.show', $newslifestyle->slug) }}">
+        <a class="search-result-link" href="{{ route('newslifestyle.show', $newslifestyle->slug) }}">
           <span class="search-result-page">Новости и образ жизни</span> {{ $newslifestyle->title }}
         </a>
       </li>

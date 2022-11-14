@@ -9,7 +9,13 @@
       <p class="attention-card__text">Информация, представленная на этом сайте, не должна использоваться для самодиагностики и лечения и не может служить заменой очной консультации с доктор.</p>
       <div class="attention-card__inner">
         <a class="attention-card__link attention-card__link--upper" href="{{ url()->previous() }}">Я не буду рисковать</a>
-        <a class="attention-card__link attention-card__link--red" href="{{ route('products.index') }}?agreement=agree">Я понял, продолжить</a>
+        <a
+          class="attention-card__link attention-card__link--red"
+          @if ($slug) href="{{ route('products.show', $slug) }}?agreement=agree"
+          @else
+          href="{{ route('products.index') }}?agreement=agree" @endif>
+          Я понял, продолжить
+        </a>
       </div>
     </div>
 
@@ -29,4 +35,3 @@
     </ul>
   </main>
 @endsection
-

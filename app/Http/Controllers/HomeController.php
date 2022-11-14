@@ -13,6 +13,7 @@ class HomeController extends Controller
 {
   public function index()
   {
+    session()->pull('aware');
     $data = Helper::getContents('home');
     $data['banners'] = Banner::latest()->get();
 
