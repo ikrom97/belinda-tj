@@ -98,7 +98,7 @@
       </label>
 
       <label class="form-dash__element">
-        <span class="form-dash__label">Нозология</span>
+        <span class="form-dash__label">По разделам</span>
         <select class="form-dash__field" name="nosology_id" style="pointer-events: all;">
           @foreach ($data['nosologies'] as $nosology)
             <option

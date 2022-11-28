@@ -15,7 +15,7 @@
         @csrf
         <p class="products-filter__item">
           <select name="nosology">
-            <option value="">Нозология</option>
+            <option value="">По разделам</option>
             @foreach ($data['nosologies'] as $nosology)
               <option value="{{ $nosology->id }}">{{ $nosology->title }}</option>
             @endforeach
