@@ -1421,6 +1421,7 @@ body.apply footer {
   top: 50%;
   right: 24px;
   transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .products-filter__item select {
@@ -3307,10 +3308,6 @@ body.attention .container {
 
   .footer__link-wrapper:not(:last-child) {
     margin-right: 24px;
-  }
-
-  .home-products__img {
-    height: 280px;
   }
 
   .footer {

@@ -113,7 +113,7 @@
         </div>
       </div>
 
-      <a class="popular-products__link red-link" href="{{ route('products.index') }}">Назад ка всем продуктам</a>
+      <a class="popular-products__link red-link" href="{{ route('products.index') }}">Назад ко всем продуктам</a>
     </section>
   </main>
 @endsection
