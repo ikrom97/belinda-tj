@@ -559,6 +559,8 @@ body.apply footer {
   padding: 0;
   border: 0;
   max-width: calc(100% - 26px);
+  background-color: #fff;
+  background-color: transparent;
 }
 
 .search-input:focus {
