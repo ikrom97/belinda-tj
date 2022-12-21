@@ -21,9 +21,9 @@
           </ul>
         </div>
 
-        <div class="banner__bullets" data-glide-el="controls[nav]">
+        <div class="glide__bullets banner__bullets" data-glide-el="controls[nav]">
           @foreach ($data['banners'] as $key => $banner)
-            <button class="banner__bullet" data-glide-dir="={{ $key }}"></button>
+            <button class="glide__bullet banner__bullet" data-glide-dir="={{ $key }}"></button>
           @endforeach
         </div>
       </div>
