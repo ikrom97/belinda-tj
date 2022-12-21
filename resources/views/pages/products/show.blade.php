@@ -37,7 +37,7 @@
         <dt class="accordion__head accordion__head--hidden">
           <div class="sample-description-term">
             <h3 class="sample-description-term__title">Состав</h3>
-            <div class="sample-description-term__subtitle content" style="flex-grow: 1;">{!! $data['product']->composition !!}</div>
+            <div class="sample-description-term__subtitle content" style="flex-grow: 1;">{!! strip_tags($data['product']->composition) !!}</div>
             <button class="sample-description-term__button dropdown-icon"></button>
           </div>
         </dt>
@@ -50,7 +50,7 @@
         <dt class="accordion__head accordion__head--hidden">
           <div class="sample-description-term">
             <h3 class="sample-description-term__title">Показания к применению</h3>
-            <div class="sample-description-term__subtitle content" style="flex-grow: 1;">{!! $data['product']->indications !!}</div>
+            <div class="sample-description-term__subtitle content" style="flex-grow: 1;">{!! strip_tags($data['product']->indications) !!}</div>
             <button class="sample-description-term__button dropdown-icon"></button>
           </div>
         </dt>
@@ -63,7 +63,7 @@
         <dt class="accordion__head accordion__head--hidden">
           <div class="sample-description-term">
             <h3 class="sample-description-term__title">Способ применения</h3>
-            <div class="sample-description-term__subtitle content" style="flex-grow: 1;">{!! $data['product']->mode !!}</div>
+            <div class="sample-description-term__subtitle content" style="flex-grow: 1;">{!! strip_tags($data['product']->mode) !!}</div>
             <button class="sample-description-term__button dropdown-icon"></button>
           </div>
         </dt>

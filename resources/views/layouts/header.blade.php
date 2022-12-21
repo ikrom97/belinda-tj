@@ -107,7 +107,7 @@
   </ul>
 
   <div class="search-container">
-    <form class="search-form" action="#" method="get">
+    <form class="search-form" action="#" method="get" onsubmit="return false;">
       @csrf
       <label class="search-label">
         <input

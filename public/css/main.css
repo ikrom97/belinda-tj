@@ -1519,6 +1519,10 @@ body.apply footer {
   grid-area: description;
 }
 
+.products-show-page__description .content * {
+  color: white !important;
+}
+
 .products-show-page__product {
   margin: 0;
   padding: 0;
@@ -1702,6 +1706,10 @@ body.apply footer {
   user-select: none;
   max-width: 50%;
   opacity: 0;
+}
+
+.sample-description-term__subtitle::first-letter {
+  text-transform: uppercase;
 }
 
 .accordion__head--hidden .sample-description-term__subtitle {

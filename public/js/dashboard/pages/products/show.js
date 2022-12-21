@@ -12,6 +12,7 @@ const nosologyEl = formEl.querySelector('select[name="nosology_id"]');
 simditors.forEach((simditor) => {
   const simdit = new Simditor({
     textarea: simditor,
+    cleanPaste: true,
     toolbar: [
       'title',
       'bold',

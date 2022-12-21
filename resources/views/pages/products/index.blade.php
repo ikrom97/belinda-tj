@@ -11,7 +11,7 @@
     </section>
 
     <div class="products-page__filter">
-      <form class="products-page__filter-form products-filter" action="{{ route('products.filter') }}" method="post">
+      <form class="products-page__filter-form products-filter" action="{{ route('products.filter') }}" method="post" onsubmit="return false;">
         @csrf
         <p class="products-filter__item">
           <select name="nosology">
@@ -41,7 +41,7 @@
         </p>
       </form>
 
-      <form class="products-page__search-form products-search">
+      <form class="products-page__search-form products-search" onsubmit="return false;">
         @csrf
         <p class="products-search__item">
           <label class="products-search__label" for="product-keyword">
