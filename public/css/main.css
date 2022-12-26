@@ -1111,6 +1111,11 @@ body.apply footer {
   justify-content: center;
   align-items: center;
   text-align: center;
+  transition: .3s;
+}
+
+.values-section-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 15%);
 }
 
 .mission-vision {
@@ -1263,6 +1268,11 @@ body.apply footer {
   padding: 40px;
   display: flex;
   align-items: center;
+  transition: .3s;
+}
+
+.advantage-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 15%);
 }
 
 .advantage-item::before {
