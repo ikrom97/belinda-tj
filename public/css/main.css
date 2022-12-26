@@ -1107,6 +1107,10 @@ body.apply footer {
   border-radius: 16px;
   color: white;
   padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .mission-vision {
