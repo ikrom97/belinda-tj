@@ -2731,6 +2731,12 @@ body.attention .container {
     max-width: 360px;
   }
 
+  .attention-card__inner {
+    display: grid;
+    justify-content: center;
+    gap: 16px;
+  }
+
   .values-section-list {
     grid-template-columns: 1fr;
   }
@@ -2954,7 +2960,7 @@ body.attention .container {
 
 @media (max-width: 767px) {
   .content p {
-    display: inline;
+    /* display: inline; */
     margin-right: 4px;
   }
 

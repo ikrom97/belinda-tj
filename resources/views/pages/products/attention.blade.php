@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <ul class="attention-list">
+    {{-- <ul class="attention-list">
       <li class="attention-list__item">
         <a class="attention-links__link" href="{{ route('about.index') }}">О нас</a>
       </li>
@@ -32,6 +32,6 @@
       <li class="attention-list__item">
         <a class="attention-links__link" href="{{ route('contacts.index') }}">Контакты</a>
       </li>
-    </ul>
+    </ul> --}}
   </main>
 @endsection

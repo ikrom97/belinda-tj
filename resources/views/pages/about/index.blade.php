@@ -72,31 +72,24 @@
         <li class="values-section-item">
           <div class="content" data-content="about-value-1">{!! $data['about-value-1'] !!}</div>
         </li>
-
         <li class="values-section-item">
           <div class="content" data-content="about-value-2">{!! $data['about-value-2'] !!}</div>
         </li>
-
         <li class="values-section-item">
           <div class="content" data-content="about-value-3">{!! $data['about-value-3'] !!}</div>
         </li>
-
         <li class="values-section-item">
           <div class="content" data-content="about-value-4">{!! $data['about-value-4'] !!}</div>
         </li>
-
         <li class="values-section-item">
           <div class="content" data-content="about-value-5">{!! $data['about-value-5'] !!}</div>
         </li>
-
         <li class="values-section-item">
           <div class="content" data-content="about-value-6">{!! $data['about-value-6'] !!}</div>
         </li>
-
         <li class="values-section-item">
           <div class="content" data-content="about-value-7">{!! $data['about-value-7'] !!}</div>
         </li>
-
         <li class="values-section-item">
           <div class="content" data-content="about-value-8">{!! $data['about-value-8'] !!}</div>
         </li>
