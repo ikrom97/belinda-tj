@@ -26,8 +26,8 @@
           <li class="advantage-item" data-text="about-advantage-2">{{ $data['about-advantage-2'] }}</li>
           <li class="advantage-item" data-text="about-advantage-3">{{ $data['about-advantage-3'] }}</li>
           <li class="advantage-item" data-text="about-advantage-4">{{ $data['about-advantage-4'] }}</li>
-          <li class="advantage-item" data-text="about-advantage-5">{{ $data['about-advantage-5'] }}</li>
-          <li class="advantage-item" data-text="about-advantage-6">{{ $data['about-advantage-6'] }}</li>
+          {{-- <li class="advantage-item" data-text="about-advantage-5">{{ $data['about-advantage-5'] }}</li> --}}
+          {{-- <li class="advantage-item" data-text="about-advantage-6">{{ $data['about-advantage-6'] }}</li> --}}
         </ul>
       </section>
     </div>
