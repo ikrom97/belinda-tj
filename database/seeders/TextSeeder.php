@@ -16,6 +16,7 @@ class TextSeeder extends Seeder
   {
     $texts = array(
       array('id' => '1', 'slug' => 'about-advantages-title', 'page' => 'about', 'text' => 'НАШИ ПРЕИМУЩЕСТВА', 'created_at' => '2022-09-16 11:40:04', 'updated_at' => '2022-09-16 11:40:04', 'deleted_at' => NULL),
+      array('id' => '1', 'slug' => 'about-values-title', 'page' => 'about', 'text' => 'НАШИ ПРЕИМУЩЕСТВА', 'created_at' => '2022-09-16 11:40:04', 'updated_at' => '2022-09-16 11:40:04', 'deleted_at' => NULL),
       array('id' => '2', 'slug' => 'about-advantage-1', 'page' => 'about', 'text' => 'ЭФФЕКТИВНОСТЬ', 'created_at' => '2022-09-16 11:40:04', 'updated_at' => '2022-09-16 11:40:04', 'deleted_at' => NULL),
       array('id' => '3', 'slug' => 'about-advantage-2', 'page' => 'about', 'text' => 'ИННОВАЦИИ', 'created_at' => '2022-09-16 11:40:04', 'updated_at' => '2022-09-16 11:40:04', 'deleted_at' => NULL),
       array('id' => '4', 'slug' => 'about-advantage-3', 'page' => 'about', 'text' => 'ПРЕДСТАВЛЕНИЕ', 'created_at' => '2022-09-16 11:40:04', 'updated_at' => '2022-09-16 11:40:04', 'deleted_at' => NULL),

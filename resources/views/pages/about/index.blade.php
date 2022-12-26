@@ -11,12 +11,27 @@
 
       <a
         class="about-page__products pretty-link all-products-link"
-        style="z-index: 2"
+        style="z-index: 2; margin-bottom: 0;"
         @if (!session('editMode')) href="{{ route('products.index') }}" @endif>
         <div class="about-page__products-inner pretty-link__inner">
           <div class="content" data-content="about-products">{!! $data['about-products'] !!}</div>
         </div>
       </a>
+    </div>
+
+    <div class="about-page__right-column">
+      <a
+        class="about-page__news pretty-link"
+        style="z-index: 4;"
+        @if (!session('editMode')) href="{{ route('newslifestyle.index') }}" @endif>
+        <div class="about-page__news-inner pretty-link__inner">
+          <div class="content" data-content="about-news">{!! $data['about-news'] !!}</div>
+        </div>
+      </a>
+
+      <section class="principles sample-wrapper sample-wrapper--dark" style="z-index: 3">
+        <div class="content" data-content="about-principles">{!! $data['about-principles'] !!}</div>
+      </section>
 
       <section class="advantages">
         <h2 class="advantages__title sample-title" data-text="about-advantages-title">{{ $data['about-advantages-title'] }}</h2>
@@ -32,38 +47,61 @@
       </section>
     </div>
 
-    <div class="about-page__right-column">
-      <a
-        class="about-page__news pretty-link"
-        style="z-index: 4"
-        @if (!session('editMode')) href="{{ route('newslifestyle.index') }}" @endif>
-        <div class="about-page__news-inner pretty-link__inner">
-          <div class="content" data-content="about-news">{!! $data['about-news'] !!}</div>
-        </div>
-      </a>
+    <section class="mission-vision">
+      <h2 class="mission-vision__title sample-title" data-text="about-mission-vision-title">{!! $data['about-mission-vision-title'] !!}</h2>
 
-      <section class="principles sample-wrapper sample-wrapper--dark" style="z-index: 3">
-        <div class="content" data-content="about-principles">{!! $data['about-principles'] !!}</div>
-      </section>
+      <ul class="mission-vision-list">
+        <li class="mission-vision-item sample-wrapper" style="z-index: 2">
+          <div class="content" data-content="about-mission-vision-1">{!! $data['about-mission-vision-1'] !!}</div>
+        </li>
 
-      <section class="mission-vision">
-        <h2 class="mission-vision__title sample-title" data-text="about-mission-vision-title">{!! $data['about-mission-vision-title'] !!}</h2>
+        <li class="mission-vision-item sample-wrapper" style="z-index: 1">
+          <div class="content" data-content="about-mission-vision-2">{!! $data['about-mission-vision-2'] !!}</div>
+        </li>
 
-        <ul class="mission-vision-list">
-          <li class="mission-vision-item sample-wrapper" style="z-index: 2">
-            <div class="content" data-content="about-mission-vision-1">{!! $data['about-mission-vision-1'] !!}</div>
-          </li>
+        <li class="mission-vision-item sample-wrapper">
+          <div class="content" data-content="about-mission-vision-3">{!! $data['about-mission-vision-3'] !!}</div>
+        </li>
+      </ul>
+    </section>
 
-          <li class="mission-vision-item sample-wrapper" style="z-index: 1">
-            <div class="content" data-content="about-mission-vision-2">{!! $data['about-mission-vision-2'] !!}</div>
-          </li>
+    <section class="values-section">
+      <h2 class="values-section__title sample-title" data-text="about-values-title">{!! $data['about-values-title'] !!}</h2>
 
-          <li class="mission-vision-item sample-wrapper">
-            <div class="content" data-content="about-mission-vision-3">{!! $data['about-mission-vision-3'] !!}</div>
-          </li>
-        </ul>
-      </section>
-    </div>
+      <ul class="values-section-list">
+        <li class="values-section-item">
+          <div class="content" data-content="about-value-1">{!! $data['about-value-1'] !!}</div>
+        </li>
+
+        <li class="values-section-item">
+          <div class="content" data-content="about-value-2">{!! $data['about-value-2'] !!}</div>
+        </li>
+
+        <li class="values-section-item">
+          <div class="content" data-content="about-value-3">{!! $data['about-value-3'] !!}</div>
+        </li>
+
+        <li class="values-section-item">
+          <div class="content" data-content="about-value-4">{!! $data['about-value-4'] !!}</div>
+        </li>
+
+        <li class="values-section-item">
+          <div class="content" data-content="about-value-5">{!! $data['about-value-5'] !!}</div>
+        </li>
+
+        <li class="values-section-item">
+          <div class="content" data-content="about-value-6">{!! $data['about-value-6'] !!}</div>
+        </li>
+
+        <li class="values-section-item">
+          <div class="content" data-content="about-value-7">{!! $data['about-value-7'] !!}</div>
+        </li>
+
+        <li class="values-section-item">
+          <div class="content" data-content="about-value-8">{!! $data['about-value-8'] !!}</div>
+        </li>
+      </ul>
+    </section>
 
     <section class="global-presence">
       <h2 class="global-presence__title sample-title" data-text="about-global-presence-title">{{ $data['about-global-presence-title'] }}</h2>

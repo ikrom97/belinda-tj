@@ -1077,8 +1077,40 @@ body.apply footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
-  grid-template-areas: "about principles"
+  grid-template-areas: 
+    "about principles"
+    "mission mission"
+    "values values"
     "presence presence";
+}
+
+.values-section {
+  grid-area: values;
+}
+
+.values-section__title {
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.values-section-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.values-section-item {
+  background-color: #424a52;
+  border-radius: 16px;
+  color: white;
+  padding: 16px 32px;
+}
+
+.mission-vision {
+  grid-area: mission;
 }
 
 .about-page__left-column {
@@ -1291,10 +1323,9 @@ body.apply footer {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.mission-vision-item:not(:last-child) {
-  margin-bottom: 32px;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .mission-vision-item::before {
@@ -2189,6 +2220,22 @@ body.attention .container {
     overflow-x: hidden;
   }
 
+  .values-section-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .mission-vision-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mission-vision-item {
+    width: 100%;
+  }
+
+  .mission-vision-item:last-child {
+    grid-column: span 2;
+  }
+
   .main-navigation {
     width: auto;
     margin-right: 24px;
@@ -2258,10 +2305,6 @@ body.attention .container {
   .global-presence__carousel,
   .vacancies__title,
   .global-presence__carousel::before {
-    margin-bottom: 24px;
-  }
-
-  .mission-vision-item:not(:last-child) {
     margin-bottom: 24px;
   }
 
@@ -2380,6 +2423,26 @@ body.attention .container {
 @media screen and (max-width: 991px) {
   .container {
     max-width: 506px;
+  }
+
+  .values-section {
+    width: 100%;
+  }
+
+  .values-section-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mission-vision-list {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-vision-item {
+    width: 100%;
+  }
+
+  .mission-vision-item:last-child {
+    grid-column: span 1;
   }
 
   .menu {
@@ -2504,7 +2567,6 @@ body.attention .container {
   .about-page__news,
   .principles,
   .mission-vision__title,
-  .mission-vision-item:not(:last-child),
   .global-presence__title,
   .global-presence__carousel::before,
   .global-presence__carousel,
@@ -2653,6 +2715,10 @@ body.attention .container {
 @media screen and (max-width: 575px) {
   .container {
     max-width: 360px;
+  }
+
+  .values-section-list {
+    grid-template-columns: 1fr;
   }
 
   .search-result-page {
