@@ -37,7 +37,7 @@ class CarrierController extends Controller
 
     $file = $request->file('cv');
 
-    Mail::to('ikromr04@gmail.com')->send(new ApplicationMail($details, $file));
+    Mail::to('info@belinda.tj')->send(new ApplicationMail($details, $file));
 
     return back();
   }
