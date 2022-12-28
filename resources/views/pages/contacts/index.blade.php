@@ -16,8 +16,9 @@
         </ul>
       </section>
 
-      <form class="form sample-wrapper sample-wrapper--dark">
+      <form class="form sample-wrapper sample-wrapper--dark"  action="{{ route('apply') }}" method="post" enctype="multipart/form-data">
         @csrf
+        <input type="hidden" name="vacancy" value="Обратная связь">
         <fieldset class="form__group">
           <legend class="form__title sample-wrapper__title sample-wrapper__title--big">Свяжитесь с нами через онлайн форму</legend>
           <p class="form__item">
@@ -27,7 +28,7 @@
             <input class="form__input" type="email" name="email" id="email" placeholder="E-mail" required data-pristine-required-message="Объязательное поле" data-pristine-email-message="E-mail не является допустимым">
           </p>
           <p class="form__item">
-            <input class="form__input" type="tel" id="phone" name="phone" placeholder="Телефон" required data-pristine-required-message="Объязательное поле">
+            <input class="form__input" type="tel" id="phone" name="еуд" placeholder="Телефон" required data-pristine-required-message="Объязательное поле">
           </p>
           <p class="form__item">
             <textarea class="form__textarea" name="message" id="message" placeholder="Введите ваше сообщение здесь..." required data-pristine-required-message="Объязательное поле"></textarea>

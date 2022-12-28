@@ -13,6 +13,9 @@ applyForm.addEventListener('submit', (evt) => {
   evt.preventDefault();
   const isValid = pristine.validate();
   if (isValid) {
-    console.log('valid');
+    evt.target.querySelector('button[type="submit"]')
+      .textContent = 'Отправляю...'
+      
+    evt.target.submit();
   }
 });
