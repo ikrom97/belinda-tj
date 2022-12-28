@@ -6,7 +6,6 @@ use App\Helpers\Helper;
 use App\Models\Banner;
 use App\Models\Newslifestyle;
 use App\Models\Product;
-use App\Models\ReleaseForm;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller

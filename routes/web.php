@@ -34,7 +34,7 @@ Route::get('/products/download_instruction', [ProductsController::class, 'downlo
 Route::get('/products/{slug}', [ProductsController::class, 'show'])->name('products.show');
 
 Route::get('/carrier', [CarrierController::class, 'index'])->name('carrier.index');
-Route::get('/carrier/apply/', [CarrierController::class, 'apply'])->name('carrier.apply');
+Route::get('/carrier/apply/{id}', [CarrierController::class, 'apply'])->name('carrier.apply');
 Route::post('/apply', [CarrierController::class, 'insertApplication'])->name('apply');
 
 Route::get('/newslifestyle', [NewsLifestyleController::class, 'index'])->name('newslifestyle.index');

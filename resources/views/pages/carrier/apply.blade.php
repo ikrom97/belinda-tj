@@ -8,7 +8,7 @@
   <main class="apply apply--hidden">
     <h2 class="apply__title sample-title">Подать заявку</h2>
     <form class="form sample-wrapper sample-wrapper--dark" action="{{ route('apply') }}" method="post" enctype="multipart/form-data">
-      <input type="hidden" name="vacancy_id" value="{{ $vacancy->id }}">
+      <input type="hidden" name="vacancy" value="{{ $vacancy->title }}">
       @csrf
       <fieldset class="form__group">
         <legend class="form__title sample-wrapper__title sample-wrapper__title--big">{{ $vacancy->title }}</legend>
@@ -22,12 +22,12 @@
         </p>
         <p class="form__item">
           <label for="phone" class="visually-hidden">Телефон</label>
-          <input class="form__input" type="tel" id="phone" name="phone" placeholder="Телефон" required data-pristine-required-message="Объязательное поле">
+          <input class="form__input" type="tel" id="phone" name="tel" placeholder="Телефон" required data-pristine-required-message="Объязательное поле">
         </p>
         <p class="form__item">
           <label for="message" class="visually-hidden">Почему мы должны выбрать вас</label>
-          <textarea class="form__textarea" name="description" id="message" placeholder="Почему мы должны выбрать вас" required data-pristine-required-message=" "></textarea>
-          <span class="form__textarea-limit"><i class="char-count">0</i>/140 букв</span>
+          <textarea class="form__textarea" name="message" id="message" placeholder="Почему мы должны выбрать вас" required data-pristine-required-message="Объязательное поле"></textarea>
+          {{-- <span class="form__textarea-limit"><i class="char-count">0</i>/140 букв</span> --}}
         </p>
       </fieldset>
       <div class="form__footer">

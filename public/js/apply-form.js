@@ -11,8 +11,13 @@ const pristine = window.Pristine(applyForm, {
 
 applyForm.addEventListener('submit', (evt) => {
   evt.preventDefault();
+
   const isValid = pristine.validate();
+  
   if (isValid) {
+    evt.target.querySelector('button[type="submit"]')
+      .textContent = 'Отправляю...'
+
     evt.target.submit();
   }
 });
