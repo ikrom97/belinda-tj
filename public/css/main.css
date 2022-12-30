@@ -1422,6 +1422,13 @@ body.apply footer {
   min-height: 380px;
 }
 
+.carrier-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 32px;
+}
+
 .products-page__info::after,
 .carrier-page__info::after {
   content: "";
@@ -2234,6 +2241,10 @@ body.attention .container {
     overflow-x: hidden;
   }
 
+  .carrier-grid {
+    grid-template-columns: 1fr;
+  }
+
   .values-section-list {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -2441,6 +2452,14 @@ body.attention .container {
 
   .values-section {
     width: 100%;
+  }
+
+  .carrier-grid .form__footer {
+    grid-template-columns: 1fr !important;
+  }
+
+  .carrier-grid .form__submit-btn {
+    margin-left: 0 !important;
   }
 
   .values-section-list {
@@ -3552,3 +3571,5 @@ body.attention .container {
 .market:last-child::before {
   background-color: #afca1e;
 }
+
+

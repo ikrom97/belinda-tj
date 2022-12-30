@@ -36,6 +36,40 @@
         </dl>
       @endif
     </section>
+
+    <div class="carrier-grid">
+      <section class="sample-wrapper" style="font-size: 20px">
+        <h2 style="font-size: 32px">Карьерный рост</h2>
+
+        <p>Мы ценим каждого сотрудника и стремимся создать для них максимально удобные условия работы. Мы предоставляем сотрудникам компенсации и премии, а также различные социальные льготы. Все это помогает нам сохранять талантливых специалистов и стимулировать их к развитию.</p>
+        <p>Мы верим, что возможности развития карьеры являются важным фактором удовлетворенности сотрудников и стремимся предоставить им такие возможности. Мы разработали специальные программы развития карьеры, которые позволяют сотрудникам углублять свои знания в своей сфере, а также получать новые навыки и опыт.</p>
+        <p>Мы также разработали систему обучения и развития, которая помогает сотрудникам развивать свои карьерные навыки и знания, а также получать новые. Наши специалисты обучения и развития работают с сотрудниками, чтобы помочь им развить свои способности и достичь своих целей.</p>
+      </section>
+
+      <form class="form sample-wrapper sample-wrapper--dark" action="{{ route('apply') }}" method="post" enctype="multipart/form-data">
+        @csrf
+        <input type="hidden" name="vacancy" value="Обратная связь">
+        <fieldset class="form__group">
+          <legend class="form__title sample-wrapper__title sample-wrapper__title--big">Свяжитесь с нами через онлайн форму</legend>
+          <p class="form__item">
+            <input class="form__input" id="name" type="text" name="name" placeholder="Имя" required data-pristine-required-message="Объязательное поле">
+          </p>
+          <p class="form__item">
+            <input class="form__input" type="email" name="email" id="email" placeholder="E-mail" required data-pristine-required-message="Объязательное поле" data-pristine-email-message="E-mail не является допустимым">
+          </p>
+          <p class="form__item">
+            <input class="form__input" type="tel" id="phone" name="еуд" placeholder="Телефон" required data-pristine-required-message="Объязательное поле">
+          </p>
+          <p class="form__item">
+            <textarea class="form__textarea" name="message" id="message" placeholder="Введите ваше сообщение здесь..." required data-pristine-required-message="Объязательное поле"></textarea>
+          </p>
+        </fieldset>
+        <div class="form__footer" style="display: grid; grid-template-columns: 1fr 1fr">
+          <p class="form__aware">Нажимая кнопку отправить, вы соглашаетесь на обработку ваших персональных данных.</p>
+          <button class="form__submit-btn red-link" style="margin-left: 32px" type="submit">Отправить</button>
+        </div>
+      </form>
+    </div>
   </main>
 @endsection
 
