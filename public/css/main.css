@@ -2022,6 +2022,7 @@ body.attention .container {
   display: grid;
   grid-template-columns: calc(50% - 16px) calc(50% - 16px);
   gap: 32px;
+  height: 100%;
 }
 
 .newslifestyle-card__inner {
