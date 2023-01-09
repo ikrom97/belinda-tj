@@ -64,6 +64,7 @@
             <textarea class="form__textarea" name="message" id="message" placeholder="Введите ваше сообщение здесь..." required data-pristine-required-message="Объязательное поле"></textarea>
           </p>
         </fieldset>
+        
         <div class="form__footer" style="display: grid; grid-template-columns: 1fr 1fr">
           <p class="form__aware">Нажимая кнопку отправить, вы соглашаетесь на обработку ваших персональных данных.</p>
           <button class="form__submit-btn red-link" style="margin-left: 32px" type="submit">Отправить</button>

@@ -1239,6 +1239,10 @@ body.apply footer {
   min-height: 456px;
 }
 
+.about-page__news.left {
+  display: none;
+}
+
 .about-page__news::before {
   background-image: url("../img/pharmacist.png");
 }
@@ -2016,7 +2020,7 @@ body.attention .container {
   position: relative;
   z-index: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: calc(50% - 16px) calc(50% - 16px);
   gap: 32px;
 }
 
@@ -2029,6 +2033,7 @@ body.attention .container {
   padding-right: 20px;
   background-color: #fff;
   border-radius: 16px;
+  max-width: 291px;
 }
 
 .newslifestyle-card__inner::after {
@@ -2241,6 +2246,14 @@ body.attention .container {
     overflow-x: hidden;
   }
 
+  .about-page__news.left {
+    display: flex;
+  }
+
+  .about-page__news.right {
+    display: none;
+  }
+
   .carrier-grid {
     grid-template-columns: 1fr;
   }
@@ -2336,7 +2349,7 @@ body.attention .container {
   .about-page__products {
     margin-bottom: 24px;
     max-height: 280px;
-    min-height: 0;
+    min-height: 300px;
   }
 
   .advantages-list {
@@ -2396,6 +2409,11 @@ body.attention .container {
   .newslifestyle-list,
   .newslifestyle-card {
     gap: 24px;
+    grid-template-columns: calc(50% - 12px) calc(50% - 12px);
+  }
+
+  .newslifestyle-card {
+    height: 100%;
   }
 
   .newslifestyle__title {

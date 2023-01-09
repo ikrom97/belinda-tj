@@ -5,6 +5,15 @@
 @section('content')
   <main class="about-page">
     <div class="about-page__left-column">
+      <a
+        class="about-page__news pretty-link left"
+        style="z-index: 4;"
+        @if (!session('editMode')) href="{{ route('newslifestyle.index') }}" @endif>
+        <div class="about-page__news-inner pretty-link__inner">
+          <div class="content" data-content="about-news">{!! $data['about-news'] !!}</div>
+        </div>
+      </a>
+
       <section class="about-page__about-belinda sample-wrapper sample-wrapper--dark" style="z-index: 3">
         <div class="content" data-content="about-belinda">{!! $data['about-belinda'] !!}</div>
       </section>
@@ -21,7 +30,7 @@
 
     <div class="about-page__right-column">
       <a
-        class="about-page__news pretty-link"
+        class="about-page__news pretty-link right"
         style="z-index: 4;"
         @if (!session('editMode')) href="{{ route('newslifestyle.index') }}" @endif>
         <div class="about-page__news-inner pretty-link__inner">
@@ -51,12 +60,12 @@
       <h2 class="mission-vision__title sample-title" data-text="about-mission-vision-title">{!! $data['about-mission-vision-title'] !!}</h2>
 
       <ul class="mission-vision-list">
-        <li class="mission-vision-item sample-wrapper" style="z-index: 2">
-          <div class="content" data-content="about-mission-vision-1">{!! $data['about-mission-vision-1'] !!}</div>
-        </li>
-
         <li class="mission-vision-item sample-wrapper" style="z-index: 1">
           <div class="content" data-content="about-mission-vision-2">{!! $data['about-mission-vision-2'] !!}</div>
+        </li>
+
+        <li class="mission-vision-item sample-wrapper" style="z-index: 2">
+          <div class="content" data-content="about-mission-vision-1">{!! $data['about-mission-vision-1'] !!}</div>
         </li>
 
         <li class="mission-vision-item sample-wrapper">
