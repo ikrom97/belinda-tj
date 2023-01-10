@@ -74,36 +74,38 @@
       </ul>
     </section>
 
-    <section class="values-section">
-      <h2 class="values-section__title sample-title" data-text="about-values-title">{!! $data['about-values-title'] !!}</h2>
+    <div class="values-section">
+      <section class="our-values">
+        <h2 class="sample-title">Наши ценности</h2>
 
-      <ul class="values-section-list">
-        <li class="values-section-item">
-          <div class="content" data-content="about-value-1">{!! $data['about-value-1'] !!}</div>
-        </li>
-        <li class="values-section-item">
-          <div class="content" data-content="about-value-2">{!! $data['about-value-2'] !!}</div>
-        </li>
-        <li class="values-section-item">
-          <div class="content" data-content="about-value-3">{!! $data['about-value-3'] !!}</div>
-        </li>
-        <li class="values-section-item">
-          <div class="content" data-content="about-value-4">{!! $data['about-value-4'] !!}</div>
-        </li>
-        <li class="values-section-item">
-          <div class="content" data-content="about-value-5">{!! $data['about-value-5'] !!}</div>
-        </li>
-        <li class="values-section-item">
-          <div class="content" data-content="about-value-6">{!! $data['about-value-6'] !!}</div>
-        </li>
-        <li class="values-section-item">
-          <div class="content" data-content="about-value-7">{!! $data['about-value-7'] !!}</div>
-        </li>
-        <li class="values-section-item">
-          <div class="content" data-content="about-value-8">{!! $data['about-value-8'] !!}</div>
-        </li>
-      </ul>
-    </section>
+        <ul class="mission-vision-list">
+          <li>
+            <img src="{{ asset('img/value1.jpg') }}" width="100%">
+            <span>Отвественность</span>
+          </li>
+          <li>
+            <img src="{{ asset('img/value2.jpg') }}" width="100%">
+            <span>Время</span>
+          </li>
+          <li>
+            <img src="{{ asset('img/value3.jpg') }}" width="100%">
+            <span>Честность</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="also-values">
+        <h2 class="sample-title">Также мы ценим</h2>
+
+        <ul>
+          <li>Саморазвитие и обучение</li>
+          <li>Командный дух и сплоченность</li>
+          <li>Уважение</li>
+          <li>Доверие</li>
+          <li>Нацеленность на результат</li>
+        </ul>
+      </section>
+    </div>
 
     <section class="global-presence">
       <h2 class="global-presence__title sample-title" data-text="about-global-presence-title">{{ $data['about-global-presence-title'] }}</h2>
