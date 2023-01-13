@@ -2,6 +2,20 @@
 
 @section('title', 'Продукт')
 
+@section('meta-tags')
+  @php
+    $share_text = preg_replace('#<[^>]+>#', ' ', $data['product']->description);
+    $share_text = mb_strlen($share_text) < 170 ? $share_text : mb_substr($share_text, 0, 166) . '...';
+  @endphp
+  <meta name="description" content="{{ $share_text }}">
+  <meta property="og:description" content="{{ $share_text }}">
+  <meta property="og:title" content="{{ $data['product']->title }}" />
+  <meta property="og:image" content="{{ asset('files/products/img/' . $data['product']->photo) }}">
+  <meta property="og:image:alt" content="{{ $data['product']->title }}">
+  <meta name="twitter:title" content="{{ $data['product']->title }}">
+  <meta name="twitter:image" content="{{ asset('files/products/img/' . $data['product']->photo) }}">
+@endsection
+
 @section('content')
   <main class="products-show-page">
     <div class="products-show-page__description sample-wrapper sample-wrapper--dark">

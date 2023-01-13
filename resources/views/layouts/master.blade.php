@@ -7,9 +7,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <meta name="robots" content="none">
-  <meta name="googlebot" content="noindex, nofollow">
-  <meta name="yandex" content="none">
+  <meta property="og:site_name" content="Belinda Laboratories">
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image">
+
+  @hasSection('meta-tags')
+    @yield('meta-tags')
+  @else
+    <meta name="description" content="Здоровье &#8212; вечная ценность ПОДРОБНЕЕ Индивидуальныйподбор продукции НашиПрепараты Полезныестатьи О компании Компания «Belinda laboratories», основанная в 2001, является молодой в мире международной фармацевтики, но успешно и активно развивается, с каждым днем завоевывая доверие и уважение своих партнеров, а также привлекая новых. Главной целью и стратегией компании является разработка новых и эффективных методов лечения различных заболеваний. &hellip; Читать далее «Главная»">
+    <meta property="og:description" content="Здоровье &#8212; вечная ценность ПОДРОБНЕЕ Индивидуальныйподбор продукции НашиПрепараты Полезныестатьи О компании Компания «Belinda laboratories», основанная в 2001, является молодой в мире международной фармацевтики, но успешно и активно развивается, с каждым днем завоевывая доверие и уважение своих партнеров, а также привлекая новых. Главной целью и стратегией компании является разработка новых и эффективных методов лечения различных заболеваний. &hellip; Читать далее «Главная»">
+    <meta property="og:title" content="Belinda Laboratories" />
+    <meta property="og:image" content="{{ asset('favicon/180x180.png') }}">
+    <meta name="twitter:title" content="Belinda Laboratories">
+    <meta name="twitter:image" content="{{ asset('favicon/180x180.png') }}">
+  @endif
 
   <title>@yield('title') - Belinda Laboratories</title>
 

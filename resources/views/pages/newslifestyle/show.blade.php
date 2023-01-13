@@ -2,6 +2,20 @@
 
 @section('title', 'Новости и образ жизни')
 
+@section('meta-tags')
+  @php
+    $share_text = preg_replace('#<[^>]+>#', ' ', $data['newslifestyle']->description);
+    $share_text = mb_strlen($share_text) < 170 ? $share_text : mb_substr($share_text, 0, 166) . '...';
+  @endphp
+  <meta name="description" content="{{ $share_text }}">
+  <meta property="og:description" content="{{ $share_text }}">
+  <meta property="og:title" content="{{ $data['newslifestyle']->title }}" />
+  <meta property="og:image" content="{{ asset('files/newslifestyle/' . $data['newslifestyle']->img) }}">
+  <meta property="og:image:alt" content="{{ $data['newslifestyle']->title }}">
+  <meta name="twitter:title" content="{{ $data['newslifestyle']->title }}">
+  <meta name="twitter:image" content="{{ asset('files/newslifestyle/' . $data['newslifestyle']->img) }}">
+@endsection
+
 @section('content')
   <main class="newslifestyle-show-page">
     <div class="newslifestyle-show">
