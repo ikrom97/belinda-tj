@@ -3,7 +3,7 @@ const headers = {
 };
 
 const getFilteredProductsTemplate = (filter, onSuccess) => {
-  fetch(`/products/filter?page=${filter.page}`, {
+  fetch(`/product/filter?page=${filter.page}`, {
     headers,
     method: 'post',
     body: JSON.stringify(filter),

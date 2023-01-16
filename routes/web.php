@@ -27,11 +27,11 @@ Route::get('/search', [HomeController::class, 'search']);
 
 Route::get('/about', [AboutController::class, 'index'])->name('about.index');
 
-Route::get('/products', [ProductsController::class, 'index'])->name('products.index');
-Route::post('/products/filter', [ProductsController::class, 'filter'])->name('products.filter');
-Route::get('/products/attention{product?}', [ProductsController::class, 'attention'])->name('products.attention');
-Route::get('/products/download_instruction', [ProductsController::class, 'downloadInstruction'])->name('products.download_instruction');
-Route::get('/products/{slug}', [ProductsController::class, 'show'])->name('products.show');
+Route::get('/product', [ProductsController::class, 'index'])->name('products.index');
+Route::post('/product/filter', [ProductsController::class, 'filter'])->name('products.filter');
+Route::get('/product/attention{product?}', [ProductsController::class, 'attention'])->name('products.attention');
+Route::get('/product/download_instruction', [ProductsController::class, 'downloadInstruction'])->name('products.download_instruction');
+Route::get('/product/{slug}', [ProductsController::class, 'show'])->name('products.show');
 
 Route::get('/carrier', [CarrierController::class, 'index'])->name('carrier.index');
 Route::get('/carrier/apply/{id}', [CarrierController::class, 'apply'])->name('carrier.apply');
@@ -42,7 +42,7 @@ Route::get('/newslifestyle/news', [NewsLifestyleController::class, 'news'])->nam
 Route::get('/newslifestyle/lifestyle', [NewsLifestyleController::class, 'lifestyle'])->name('newslifestyle.lifestyle');
 Route::get('/newslifestyle/{slug}', [NewsLifestyleController::class, 'show'])->name('newslifestyle.show');
 
-Route::get('/contacts', [ContactsController::class, 'index'])->name('contacts.index');
+Route::get('/contact/', [ContactsController::class, 'index'])->name('contacts.index');
 
 // Auth routes
 Route::post('/auth/check', [AuthController::class, 'check'])->name('auth.check');
@@ -68,3 +68,24 @@ Route::group(['middleware' => ['AuthCheck']], function () {
     Route::post('/admin-vacancies/{action?}/', [AdminController::class, 'vacanciesPost'])->name('admin.vacancies.post');
   });
 });
+
+Route::redirect('/products/', '/product');
+Route::redirect('/about-us/', '/about');
+Route::redirect('/career/', '/carrier');
+Route::redirect('/contacts/', '/contact');
+Route::redirect('/nosology/{path}', '/product');
+Route::redirect('/vitaminy/', '/product');
+Route::redirect('//polza-zhirnyh-kislot-omega-3-dlja-zdorovja/', '/newslifestyle/polza-zhirnyh-kislot-omega-3-dlya-zdorovya');
+Route::redirect('/avitaminoz-i-gipovitaminoz/', '/newslifestyle/avitaminoz-i-gipovitaminoz');
+Route::redirect('/poleznye-svojstva-vitamina-a/', '/newslifestyle/poleznye-svoystva-vitamina-a');
+
+Route::redirect('/chem-zhenskij-mozg-otlichaetsja-ot-muzhskogo-5-interesnyh-faktov/', '/newslifestyle/chem-zhenskiy-mozg-otlichaetsya-ot-muzhskogo-5-interesnyh-faktov');
+Route::redirect('/useful-articles/', '/newslifestyle');
+Route::redirect('/drug-selection/', '/product');
+Route::redirect('/career/', '/carrier');
+Route::redirect('/career/', '/carrier');
+Route::redirect('/career/', '/carrier');
+Route::redirect('/career/', '/carrier');
+Route::redirect('/career/', '/carrier');
+Route::redirect('/career/', '/carrier');
+Route::redirect('/career/', '/carrier');
