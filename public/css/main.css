@@ -927,6 +927,10 @@ body.apply footer {
   background-image: url("../img/news-icon.png");
 }
 
+.home-page__product {
+  height: 100%;
+}
+
 .home-page__product::before {
   content: "";
   background-image: url("../img/products-icon.png");
