@@ -6,7 +6,6 @@ use App\Helpers\Helper;
 use App\Models\Banner;
 use App\Models\Newslifestyle;
 use App\Models\Product;
-use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -17,11 +16,6 @@ class HomeController extends Controller
     $data['banners'] = Banner::latest()->get();
 
     $products = Product::get();
-
-    foreach ($products as $product) {
-      $product->slug = SlugService::createSlug(Product::class, 'slug', $product->title);
-      $product->update();
-    }
 
     return view('pages.home.index', compact('data'));
   }
