@@ -191,4 +191,4 @@ Route::redirect('/chto-takoe-ostraja-serdechnaja-nedostatochnost/', '/newslifest
 Route::redirect('/7-prichin-est-bolshe-produktov-s-vitaminom-c-3/', '/newslifestyle');
 Route::redirect('/trombojembolija-legochnoj-arterii/', '/newslifestyle/tromboemboliya-legochnoy-arterii-tela');
 Route::redirect('/o-chem-govorit-kashel/', '/newslifestyle/o-chem-govorit-kashel');
-Route::get('/contact/', [ContactsController::class, 'index'])->name('contacts.index');
+Route::redirect('/stofeksim-suspenzija/', '/product/stofeksim-suspenziya');
