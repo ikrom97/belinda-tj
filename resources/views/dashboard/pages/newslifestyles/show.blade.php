@@ -63,7 +63,7 @@
           data-pristine-required-message="Объязательное поле">
       </label>
 
-      <label class="form-dash__element" style="grid-column: span 3; grid-row: span 4">
+      <div class="form-dash__element" style="grid-column: span 3; grid-row: span 4">
         <span class="form-dash__label">Описание</span>
         <textarea
           class="form-dash__field"
@@ -72,7 +72,7 @@
           rows="10">
           {{ $data['newslifestyle']->description ?? '' }}
         </textarea>
-      </label>
+      </div>
     </form>
   </main>
 @endsection

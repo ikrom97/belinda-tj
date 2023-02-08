@@ -40,7 +40,7 @@
                 <div>{{ $newslifestyle->img ?? '' }}</div>
               </td>
               <td>
-                <div>{{ $newslifestyle->description }}</div>
+                <div>{!! strip_tags($newslifestyle->description) !!}</div>
               </td>
               <td>
                 <a href="{{ route('admin.newslifestyles', ['action' => 'edit', 'newslifestyle' => $newslifestyle->id]) }}">Редактировать</a>
