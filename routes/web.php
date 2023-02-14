@@ -192,3 +192,4 @@ Route::redirect('/7-prichin-est-bolshe-produktov-s-vitaminom-c-3/', '/newslifest
 Route::redirect('/trombojembolija-legochnoj-arterii/', '/newslifestyle/tromboemboliya-legochnoy-arterii-tela');
 Route::redirect('/o-chem-govorit-kashel/', '/newslifestyle/o-chem-govorit-kashel');
 Route::redirect('/stofeksim-suspenzija/', '/product/stofeksim-suspenziya');
+Route::redirect('/lambrotin-tabletki/', '/product/lambrotin');
