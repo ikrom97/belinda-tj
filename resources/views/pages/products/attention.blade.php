@@ -8,10 +8,8 @@
       <h1 class="attention-card__title">Внимание</h1>
       <p class="attention-card__text">Информация, представленная на этом сайте, не должна использоваться для самодиагностики и лечения и не может служить заменой очной консультации с доктор.</p>
       <div class="attention-card__inner">
-        <a class="attention-card__link attention-card__link--upper" href="{{ url()->previous() }}">Я не буду рисковать</a>
-        <a
-          class="attention-card__link attention-card__link--red"
-          @if ($slug) href="{{ route('products.show', $slug) }}?agreement=agree"
+        <a class="attention-card__link attention-card__link--upper" href="{{ route('home.index') }}">Я не буду рисковать</a>
+        <a class="attention-card__link attention-card__link--red" @if ($slug) href="{{ route('products.show', $slug) }}?agreement=agree"
           @else
           href="{{ route('products.index') }}?agreement=agree" @endif>
           Я понял, продолжить

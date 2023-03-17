@@ -61,15 +61,15 @@ class ProductsController extends Controller
 
   public function show(Request $request)
   {
+    $data = Helper::getContents('products');
+    $data['product'] = Product::where('slug', $request->slug)->first();
+    
     if ($request->agreement == 'agree') {
       session()->put('aware', 'awared');
     }
-    if (!session()->has('aware')) {
+    if (!session()->has('aware') && $data['product']->prescription == 'RX') {
       return redirect(route('products.attention') . '?slug=' . $request->slug);
-    }
-
-    $data = Helper::getContents('products');
-    $data['product'] = Product::where('slug', $request->slug)->first();
+    }  
 
     $data['similar-products'] = Product::where('nosology_id', $data['product']->nosology_id)
       ->orWhere('classification_id', $data['product']->classification_id)
